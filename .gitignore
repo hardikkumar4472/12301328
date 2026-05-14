@@ -1,0 +1,4 @@
+.env
+node_modules/
+notification_app_be
+notification_app_fe
