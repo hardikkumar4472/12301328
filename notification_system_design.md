@@ -108,3 +108,7 @@ Standard HTTP status codes will be used:
 *   `401 Unauthorized`: Missing or invalid token.
 *   `403 Forbidden`: User trying to access/modify a notification that doesn't belong to them.
 *   `404 Not Found`: Notification ID does not exist.
+
+
+Stage 2:
+implemented mongoDB added schemas and storing data on mongo db
