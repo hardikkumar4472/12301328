@@ -1,0 +1,36 @@
+Assignment Implementation Steps
+
+Step 1: Logging Middleware Setup
+- Located in: /logging_middleware
+- Purpose: Provides a custom logger for tracking request details.
+- To run:
+  1. cd logging_middleware
+  2. npm install
+  3. node index.js
+
+Step 2: Notification System Design
+- Located in: notification_system_design.md
+- Purpose: Documenting the REST API contracts, core actions, and real-time notification strategy.
+
+Step 3: Notification Backend Implementation
+- Located in: /notification_app_be
+- Purpose: Student notification platform for Placements, Events, and Results.
+- Integration: This service MUST use the custom Logging Middleware from Step 1.
+- To run:
+  1. cd notification_app_be
+  2. npm install
+  3. node index.js
+
+Step 4: Testing the API
+- The server runs on port 5000.
+- Get a token first:
+  - GET http://localhost:5000/api/v1/get-token
+- Use the token in Postman:
+  Key: Authorization
+  Value: Bearer <your_token>
+- Test Endpoints:
+  - GET http://localhost:5000/api/v1/notifications
+  - PATCH http://localhost:5000/api/v1/notifications/<id>/read
+  - POST http://localhost:5000/api/v1/notifications/read-all
+  - GET http://localhost:5000/api/v1/notifications/preferences
+- Observation: Check the terminal console; every request will be logged using the mandatory Logging Middleware.
